@@ -10,7 +10,6 @@ const config = {
       queue: "dummy",
     },
   },
-
   middleware: {
     external: true,
     override: {
@@ -19,7 +18,6 @@ const config = {
       proxyExternalRequest: "fetch",
     },
   },
-
   dangerous: {
     enableCacheInterception: false,
   },

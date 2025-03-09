@@ -6,7 +6,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "star-voice-tts",
 	"main": ".open-next/worker.js",
-	"compatibility_date": "2024-09-26",
+	"compatibility_date": "2024-10-22",
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
@@ -17,7 +17,13 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"kv_namespaces": [
+		{
+			"binding": "STAR_VOICE_TTS_KV",
+			"id": "38cd0edc115749e6b39d05fc0d4386a6"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
