@@ -184,7 +184,7 @@ export default function MainPage() {
                                 </div>
 
                                 {/* 情感选择 */}
-                                <div>
+                                {/* <div>
                                     <h2 className="text-xl font-semibold mb-4 flex items-center">
                                         <Heart className="mr-2 h-5 w-5" />
                                         选择情感
@@ -208,7 +208,7 @@ export default function MainPage() {
                                             </div>
                                         ))}
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* 文本输入和音频生成区域 */}
@@ -289,7 +289,10 @@ export default function MainPage() {
                                     <div className="mt-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
                                         <div className="flex items-center justify-between">
                                             <h3 className="font-medium  flex items-center">
-                                                {selectedCelebrity?.name} ({EMOTION_MAP[selectedEmotion || '']?.desc})
+                                                {selectedCelebrity?.name}{' '}
+                                                {EMOTION_MAP[selectedEmotion || '']?.desc
+                                                    ? `(${EMOTION_MAP[selectedEmotion || '']?.desc})`
+                                                    : ``}
                                                 的配音
                                             </h3>
                                             <button
